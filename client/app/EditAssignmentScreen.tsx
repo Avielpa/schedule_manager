@@ -1,8 +1,7 @@
-// app/event/EditAssignmentScreen.tsx
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator, Alert, Switch } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
-import { updateAssignment } from '@/service/api'; // ודא ש-assignmentService מייצא את updateAssignment
+import { updateAssignment } from '@/service/api';
 import { format } from 'date-fns';
 
 export default function EditAssignmentScreen() {

@@ -1,0 +1,12 @@
+{
+    "start_date": "2025-07-25",
+    "end_date": "2025-09-18",
+    "default_base_days_target": 33,
+    "default_home_days_target": 25,
+    "max_consecutive_base_days": 7,
+    "max_consecutive_home_days": 11,
+    "min_base_block_days": 3,
+    "min_required_soldiers_per_day": 8,
+    "max_total_home_days": null,
+    "max_weekend_base_days_per_soldier": null
+}

@@ -1,0 +1,4973 @@
+{
+  "metadata": {
+    "generated_at": "2025-07-29T11:32:00.358807",
+    "generator": "simple_schedule_generator",
+    "total_soldiers": 17
+  },
+  "soldiers": {
+    "נחמיה": {
+      "soldier_info": {
+        "name": "נחמיה",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Base",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 14,
+        "total_home_days": 42
+      }
+    },
+    "פחימה": {
+      "soldier_info": {
+        "name": "פחימה",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Base",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 21,
+        "total_home_days": 35
+      }
+    },
+    "יאיר": {
+      "soldier_info": {
+        "name": "יאיר",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Base",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 21,
+        "total_home_days": 35
+      }
+    },
+    "קינדה": {
+      "soldier_info": {
+        "name": "קינדה",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Base",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 19,
+        "total_home_days": 37
+      }
+    },
+    "גל": {
+      "soldier_info": {
+        "name": "גל",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 14,
+        "total_home_days": 42
+      }
+    },
+    "שיטרית": {
+      "soldier_info": {
+        "name": "שיטרית",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 11,
+        "total_home_days": 45
+      }
+    },
+    "ישראל": {
+      "soldier_info": {
+        "name": "ישראל",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 9,
+        "total_home_days": 47
+      }
+    },
+    "אושיק": {
+      "soldier_info": {
+        "name": "אושיק",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 12,
+        "total_home_days": 44
+      }
+    },
+    "יוסי": {
+      "soldier_info": {
+        "name": "יוסי",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 7,
+        "total_home_days": 49
+      }
+    },
+    "אורי יפה": {
+      "soldier_info": {
+        "name": "אורי יפה",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 13,
+        "total_home_days": 43
+      }
+    },
+    "שניר": {
+      "soldier_info": {
+        "name": "שניר",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 10,
+        "total_home_days": 46
+      }
+    },
+    "מאיר": {
+      "soldier_info": {
+        "name": "מאיר",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 13,
+        "total_home_days": 43
+      }
+    },
+    "אופק": {
+      "soldier_info": {
+        "name": "אופק",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 13,
+        "total_home_days": 43
+      }
+    },
+    "דב רוזנברג": {
+      "soldier_info": {
+        "name": "דב רוזנברג",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 14,
+        "total_home_days": 42
+      }
+    },
+    "אדרי": {
+      "soldier_info": {
+        "name": "אדרי",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 6,
+        "total_home_days": 50
+      }
+    },
+    "בדור": {
+      "soldier_info": {
+        "name": "בדור",
+        "is_weekend_only": false
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Base",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 12,
+        "total_home_days": 44
+      }
+    },
+    "ינון": {
+      "soldier_info": {
+        "name": "ינון",
+        "is_weekend_only": true
+      },
+      "schedule": [
+        {
+          "date": "2025-07-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-26",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-07-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-30",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-07-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-02",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-06",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-09",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-13",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-16",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-18",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-19",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-20",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-21",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-22",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-23",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-24",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-25",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-26",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-27",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-28",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-29",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-08-30",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-08-31",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-01",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-02",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-03",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-04",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-05",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-06",
+          "status": "Home",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-07",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-08",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-09",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-10",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-11",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-12",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-13",
+          "status": "Base",
+          "is_weekend": true
+        },
+        {
+          "date": "2025-09-14",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-15",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-16",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-17",
+          "status": "Home",
+          "is_weekend": false
+        },
+        {
+          "date": "2025-09-18",
+          "status": "Home",
+          "is_weekend": false
+        }
+      ],
+      "summary": {
+        "total_base_days": 1,
+        "total_home_days": 55
+      }
+    }
+  }
+}

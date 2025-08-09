@@ -7,7 +7,6 @@ __pycache__/
 env/
 venv/
 *.env
-.vscode/
 
 # Django
 *.log
@@ -17,11 +16,23 @@ venv/
 *.css.map
 db.sqlite3
 db.sqlite3-journal
+db_fresh.sqlite3
 media/
 static/
 /staticfiles/
-.DS_Store # macOS specific
-.env # Environment variables
+*.env
+
+# Node.js / React Native
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+.expo/
+.expo-shared/
+dist/
+build/
 
 # IDEs and other tools
 .idea/ # PyCharm
@@ -38,8 +49,12 @@ static/
 ehthumbs.db
 Thumbs.db
 
-# OR-Tools specific temporary files (if any are created and need to be ignored)
-# This is less common for standard OR-Tools usage, but good to include if
-# you notice specific temporary files being generated.
+# Claude Code
+.claude/
+
+# Temporary files
+nul
+
+# OR-Tools specific temporary files
 *.opb
 *.lp

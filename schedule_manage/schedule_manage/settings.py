@@ -38,20 +38,7 @@ REST_FRAMEWORK = {
     ]
 }
 
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-    'ROTATE_REFRESH_TOKENS': False,
-    'BLACKLIST_AFTER_ROTATION': True,
-    'ALGORITHM': 'HS256',
-    'SIGNING_KEY': 'secret-key',
-    'VERIFYING_KEY': None,
-    'AUDIENCE': None,
-    'ISSUER': None,
-    'AUTH_HEADER_TYPES': ('Bearer',),
-    'USER_ID_FIELD': 'id',
-    'USER_ID_CLAIM': 'user_id',
-}
+# JWT configuration removed for simplicity
 
 
 # Application definition
@@ -64,9 +51,27 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework_simplejwt.token_blacklist',
     'schedule',
 ]
+
+# Add optional packages if available
+try:
+    import corsheaders
+    INSTALLED_APPS.append('corsheaders')
+except ImportError:
+    pass
+
+try:
+    import django_filters
+    INSTALLED_APPS.append('django_filters')
+except ImportError:
+    pass
+
+try:
+    import drf_spectacular
+    INSTALLED_APPS.append('drf_spectacular')
+except ImportError:
+    pass
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,6 +82,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Add optional middleware if packages are available
+if 'corsheaders' in INSTALLED_APPS:
+    MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 
 ROOT_URLCONF = 'schedule_manage.urls'
 
@@ -104,7 +113,7 @@ WSGI_APPLICATION = 'schedule_manage.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db_fresh.sqlite3',
     }
 }
 
@@ -149,3 +158,239 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# ==============================================================================
+# PERFORMANCE OPTIMIZATIONS
+# ==============================================================================
+
+# Caching Configuration (use in-memory cache - no database table needed)
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+    }
+}
+
+# Session Configuration - Use database backend (no cache table needed)
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+# ==============================================================================
+# CELERY CONFIGURATION
+# ==============================================================================
+
+# Celery settings
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = TIME_ZONE
+CELERY_ENABLE_UTC = USE_TZ
+
+# Task routing
+CELERY_TASK_ROUTES = {
+    'schedule.tasks.run_scheduling_algorithm_async': {'queue': 'scheduling'},
+    'schedule.tasks.cleanup_old_assignments': {'queue': 'cleanup'},
+    'schedule.tasks.validate_schedule_consistency': {'queue': 'validation'},
+}
+
+# Task time limits
+CELERY_TASK_TIME_LIMIT = 30 * 60  # 30 minutes
+CELERY_TASK_SOFT_TIME_LIMIT = 25 * 60  # 25 minutes
+
+# ==============================================================================
+# REST FRAMEWORK ENHANCEMENTS
+# ==============================================================================
+
+# Update REST_FRAMEWORK settings conditionally
+rest_framework_update = {
+    'DEFAULT_FILTER_BACKENDS': [
+        'rest_framework.filters.SearchFilter',
+        'rest_framework.filters.OrderingFilter',
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 50,
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
+}
+
+# Add django_filters if available
+if 'django_filters' in INSTALLED_APPS:
+    rest_framework_update['DEFAULT_FILTER_BACKENDS'].insert(0, 'django_filters.rest_framework.DjangoFilterBackend')
+
+# Add drf_spectacular if available
+if 'drf_spectacular' in INSTALLED_APPS:
+    rest_framework_update['DEFAULT_SCHEMA_CLASS'] = 'drf_spectacular.openapi.AutoSchema'
+
+REST_FRAMEWORK.update(rest_framework_update)
+
+# ==============================================================================
+# API DOCUMENTATION
+# ==============================================================================
+
+# Only set if drf_spectacular is available
+if 'drf_spectacular' in INSTALLED_APPS:
+    SPECTACULAR_SETTINGS = {
+        'TITLE': 'Schedule Management API',
+        'DESCRIPTION': 'Comprehensive API for military/organizational scheduling system',
+        'VERSION': '2.0.0',
+        'SERVE_INCLUDE_SCHEMA': False,
+        'COMPONENT_SPLIT_REQUEST': True,
+        'SCHEMA_PATH_PREFIX': '/api/',
+    }
+
+# ==============================================================================
+# CORS CONFIGURATION
+# ==============================================================================
+
+# Only set CORS settings if corsheaders is available
+if 'corsheaders' in INSTALLED_APPS:
+    CORS_ALLOWED_ORIGINS = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "http://localhost:8080",
+        "http://127.0.0.1:8080",
+    ]
+
+    CORS_ALLOW_CREDENTIALS = True
+
+    CORS_ALLOWED_HEADERS = [
+        'accept',
+        'accept-encoding',
+        'authorization',
+        'content-type',
+        'dnt',
+        'origin',
+        'user-agent',
+        'x-csrftoken',
+        'x-requested-with',
+    ]
+
+# ==============================================================================
+# LOGGING CONFIGURATION
+# ==============================================================================
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
+
+# ==============================================================================
+# SECURITY ENHANCEMENTS
+# ==============================================================================
+
+# Security settings for production
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+X_FRAME_OPTIONS = 'DENY'
+
+# Rate limiting
+RATELIMIT_ENABLE = True
+RATELIMIT_USE_CACHE = 'default'
+
+# ==============================================================================
+# CUSTOM SCHEDULING SETTINGS
+# ==============================================================================
+
+# Scheduling algorithm settings
+SCHEDULING_SETTINGS = {
+    'DEFAULT_TIMEOUT_SECONDS': 300,
+    'MAX_TIMEOUT_SECONDS': 1800,  # 30 minutes max
+    'ENABLE_ADVANCED_CONSTRAINTS': True,
+    'CACHE_ALGORITHM_RESULTS': True,
+    'ASYNC_PROCESSING': True,
+    'MAX_CONCURRENT_JOBS': 3,
+    'CLEANUP_OLD_RUNS_DAYS': 90,
+}
+
+# Algorithm penalty weights
+ALGORITHM_PENALTIES = {
+    'ONE_DAY_BLOCK': 20_000_000,
+    'SHORTAGE': 2_000_000,
+    'NO_WORK': 10_000_000,
+    'CONSTRAINTS': 1_000_000,
+    'LONG_BLOCK': 100_000,
+    'CRITICAL_LONG_BLOCK': 5_000_000,
+}
+
+# Export settings
+EXPORT_SETTINGS = {
+    'EXCEL_MAX_ROWS': 50000,
+    'JSON_INDENT': 2,
+    'INCLUDE_METADATA': True,
+    'DEFAULT_EXPORT_PATH': BASE_DIR / 'exports',
+}
+
+# ==============================================================================
+# DEVELOPMENT SETTINGS
+# ==============================================================================
+
+if DEBUG:
+    # Django Debug Toolbar
+    try:
+        import debug_toolbar
+        INSTALLED_APPS.append('debug_toolbar')
+        MIDDLEWARE.insert(1, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+        INTERNAL_IPS = ['127.0.0.1', '10.0.2.2']
+    except ImportError:
+        pass
+    
+    # Development email backend
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    
+    # Disable caching in development
+    CACHES['default']['TIMEOUT'] = 60  # 1 minute in development
+
+# ==============================================================================
+# PRODUCTION OVERRIDES
+# ==============================================================================
+
+import os
+
+if not DEBUG:
+    # Production security settings
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    
+    # Production database (example for PostgreSQL)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ.get('DB_NAME', 'schedule_manage'),
+            'USER': os.environ.get('DB_USER', 'postgres'),
+            'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+            'HOST': os.environ.get('DB_HOST', 'localhost'),
+            'PORT': os.environ.get('DB_PORT', '5432'),
+        }
+    }
+    
+    # Production static files
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+    
+    # Production media files
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR / 'media'
+    
+    # Production logging
+    LOGGING['handlers']['file']['filename'] = '/var/log/schedule_manage/django.log'
+    LOGGING['handlers']['scheduling_file']['filename'] = '/var/log/schedule_manage/scheduling.log'

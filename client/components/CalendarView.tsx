@@ -1,9 +1,20 @@
 import React, { useState, useMemo } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import moment from "moment";
-import "moment/locale/he";
-
-moment.locale("he");
+import { 
+  format, 
+  startOfMonth, 
+  endOfMonth, 
+  startOfWeek, 
+  endOfWeek, 
+  addDays, 
+  addMonths,
+  subMonths,
+  isSameDay,
+  isSameMonth,
+  parseISO,
+  eachDayOfInterval
+} from "date-fns";
+import { he } from "date-fns/locale";
 
 interface CalendarViewProps {
   startDate: string;
@@ -19,65 +30,58 @@ export default function CalendarView({
   onDateSelect,
 }: CalendarViewProps) {
   const [currentMonth, setCurrentMonth] = useState(
-    moment(startDate).startOf("month")
+    startOfMonth(parseISO(startDate))
   );
 
   const eventDates = useMemo(() => {
-    const dates: string[] = [];
-    let current = moment(startDate);
-    const end = moment(endDate);
-    while (current.isSameOrBefore(end)) {
-      dates.push(current.format("YYYY-MM-DD"));
-      current.add(1, "day");
-    }
-    return dates;
+    const start = parseISO(startDate);
+    const end = parseISO(endDate);
+    
+    return eachDayOfInterval({ start, end }).map(date => 
+      format(date, "yyyy-MM-dd")
+    );
   }, [startDate, endDate]);
 
   const daysInMonth = useMemo(() => {
-    const start = moment(currentMonth).startOf("week");
-    const end = moment(currentMonth).endOf("month").endOf("week");
-    const days: moment.Moment[] = [];
-
-    let day = start.clone();
-    while (day.isSameOrBefore(end)) {
-      days.push(day.clone());
-      day.add(1, "day");
-    }
-
-    return days;
+    const start = startOfWeek(startOfMonth(currentMonth));
+    const end = endOfWeek(endOfMonth(currentMonth));
+    
+    return eachDayOfInterval({ start, end });
   }, [currentMonth]);
 
-  const handleSelect = (date: moment.Moment) => {
-    const dateString = date.format("YYYY-MM-DD");
+  const handleSelect = (date: Date) => {
+    const dateString = format(date, "yyyy-MM-dd");
     if (eventDates.includes(dateString)) {
       onDateSelect(dateString);
     }
   };
 
+  const weekdaysShort = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש'];
+
   return (
     <View style={styles.calendarContainer}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => setCurrentMonth(prev => prev.clone().subtract(1, "month"))}>
+        <TouchableOpacity onPress={() => setCurrentMonth(prev => subMonths(prev, 1))}>
           <Text style={styles.navButton}>{"<"}</Text>
         </TouchableOpacity>
-        <Text style={styles.monthLabel}>{currentMonth.format("MMMM YYYY")}</Text>
-        <TouchableOpacity onPress={() => setCurrentMonth(prev => prev.clone().add(1, "month"))}>
+        <Text style={styles.monthLabel}>{format(currentMonth, "MMMM yyyy", { locale: he })}</Text>
+        <TouchableOpacity onPress={() => setCurrentMonth(prev => addMonths(prev, 1))}>
           <Text style={styles.navButton}>{">"}</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.weekdays}>
-        {moment.weekdaysShort(true).map(day => (
+        {weekdaysShort.map(day => (
           <Text key={day} style={styles.weekdayText}>{day}</Text>
         ))}
       </View>
 
       <View style={styles.daysContainer}>
         {daysInMonth.map((day) => {
-          const dateStr = day.format("YYYY-MM-DD");
+          const dateStr = format(day, "yyyy-MM-dd");
           const isSelected = selectedDate === dateStr;
-          const isInMonth = day.month() === currentMonth.month();
-          const isToday = day.isSame(moment(), "day");
+          const isInMonth = isSameMonth(day, currentMonth);
+          const isToday = isSameDay(day, new Date());
           const isValid = eventDates.includes(dateStr);
 
           return (
@@ -100,7 +104,7 @@ export default function CalendarView({
                   !isValid && styles.disabledDayText
                 ]}
               >
-                {day.date()}
+                {format(day, "d")}
               </Text>
             </TouchableOpacity>
           );
