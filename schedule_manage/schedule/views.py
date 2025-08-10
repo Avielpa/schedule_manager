@@ -77,12 +77,13 @@ class EventViewSet(viewsets.ModelViewSet):
 
 class SoldierViewSet(viewsets.ModelViewSet):
     """
-    API endpoint for managing soldiers with full JSON POST support
+    API endpoint for managing soldiers with event association
     
     Supports creating soldiers via JSON POST:
     POST /api/soldiers/
     Content-Type: application/json
     {
+        "event_id": 1,
         "name": "John Doe",
         "soldier_id": "S001",
         "rank": "PRIVATE", 
@@ -97,11 +98,14 @@ class SoldierViewSet(viewsets.ModelViewSet):
         ]
     }
     
+    Filter soldiers by event:
+    GET /api/soldiers/?event=1
+    
     Also supports bulk creation:
     POST /api/soldiers/bulk_create/
     [
-        {"name": "Soldier 1", "soldier_id": "S001", "rank": "PRIVATE"},
-        {"name": "Soldier 2", "soldier_id": "S002", "rank": "CORPORAL"}
+        {"event_id": 1, "name": "Soldier 1", "soldier_id": "S001", "rank": "PRIVATE"},
+        {"event_id": 1, "name": "Soldier 2", "soldier_id": "S002", "rank": "CORPORAL"}
     ]
     """
     queryset = Soldier.objects.all()
@@ -116,7 +120,12 @@ class SoldierViewSet(viewsets.ModelViewSet):
         return SoldierSerializer
     
     def get_queryset(self):
-        queryset = Soldier.objects.all()
+        queryset = Soldier.objects.select_related('event')
+        
+        # Filter by event (important!)
+        event_id = self.request.query_params.get('event')
+        if event_id:
+            queryset = queryset.filter(event_id=event_id)
         
         # Filter by rank
         rank = self.request.query_params.get('rank')
@@ -132,7 +141,7 @@ class SoldierViewSet(viewsets.ModelViewSet):
         if is_weekend_only is not None:
             queryset = queryset.filter(is_weekend_only_soldier_flag=is_weekend_only.lower() == 'true')
         
-        return queryset.order_by('rank', 'name')
+        return queryset.order_by('event', 'rank', 'name')
     
     @action(detail=False, methods=['post'])
     def bulk_create(self, request):
@@ -259,7 +268,7 @@ class SchedulingRunViewSet(viewsets.ModelViewSet):
         "name": "January 2025 Schedule",
         "description": "Monthly schedule for training",
         "event_id": 1,
-        "soldiers_ids": [1, 2, 3, 4, 5]
+        "soldiers_ids": [1, 2, 3, 4, 5]  // Optional - if not provided, uses all soldiers from the event
     }
     
     Execute algorithm:

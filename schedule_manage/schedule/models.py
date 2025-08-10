@@ -9,7 +9,7 @@ from datetime import date
 
 class Event(models.Model):
     """
-    Simple event model - independent container for scheduling
+    Dynamic event model - user configures all scheduling rules
     """
     EVENT_TYPE_CHOICES = [
         ('TRAINING', 'Training'),
@@ -28,13 +28,32 @@ class Event(models.Model):
     start_date = models.DateField(verbose_name="Start Date")
     end_date = models.DateField(verbose_name="End Date")
     
-    # Simple scheduling parameters
+    # Core scheduling parameters (user-configurable)
     min_required_soldiers_per_day = models.IntegerField(default=10, verbose_name="Min Required Soldiers Per Day")
     base_days_per_soldier = models.IntegerField(null=True, blank=True, verbose_name="Base Days Per Soldier")
     home_days_per_soldier = models.IntegerField(null=True, blank=True, verbose_name="Home Days Per Soldier")
     max_consecutive_base_days = models.IntegerField(default=7, verbose_name="Max Consecutive Base Days")
     max_consecutive_home_days = models.IntegerField(default=10, verbose_name="Max Consecutive Home Days")
     min_base_block_days = models.IntegerField(default=3, verbose_name="Min Base Block Days")
+    
+    # Advanced user-configurable algorithm parameters
+    exceptional_constraint_threshold = models.IntegerField(default=10, verbose_name="Exceptional Constraint Threshold", 
+                                                          help_text="Soldiers with more constraints than this are treated as exceptional")
+    constraint_safety_margin_percent = models.IntegerField(default=25, verbose_name="Constraint Safety Margin (%)",
+                                                           help_text="Extra home days percentage for exceptional soldiers")
+    weekend_only_max_base_days = models.IntegerField(default=14, verbose_name="Weekend-Only Max Base Days",
+                                                     help_text="Maximum consecutive base days for weekend-only soldiers")
+    
+    # Algorithm weight parameters (user-configurable)
+    enable_home_balance_penalty = models.BooleanField(default=True, verbose_name="Enable Home Balance Penalty")
+    enable_weekend_fairness_weight = models.BooleanField(default=True, verbose_name="Enable Weekend Fairness")
+    home_balance_weight = models.FloatField(default=1.0, verbose_name="Home Balance Weight")
+    weekend_fairness_weight = models.FloatField(default=1.0, verbose_name="Weekend Fairness Weight")
+    
+    # Flexibility settings
+    allow_single_day_blocks = models.BooleanField(default=False, verbose_name="Allow Single Day Base Blocks")
+    strict_consecutive_limits = models.BooleanField(default=True, verbose_name="Strict Consecutive Day Limits")
+    auto_adjust_for_constraints = models.BooleanField(default=True, verbose_name="Auto-Adjust for High Constraints")
     
     created_at = models.DateTimeField(auto_now_add=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
@@ -50,7 +69,7 @@ class Event(models.Model):
 
 class Soldier(models.Model):
     """
-    Simplified soldier model - basic information only
+    Soldier model - now belongs to specific event
     """
     RANK_CHOICES = [
         ('PRIVATE', 'Private'),
@@ -64,9 +83,12 @@ class Soldier(models.Model):
         ('CIVILIAN', 'Civilian'),
     ]
     
+    # Event association - each soldier belongs to one event
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='soldiers', verbose_name="Event", null=True, blank=True)
+    
     # Basic information
     name = models.CharField(max_length=100, verbose_name="Soldier Name")
-    soldier_id = models.CharField(max_length=50, unique=True, blank=True, null=True, verbose_name="Soldier ID")
+    soldier_id = models.CharField(max_length=50, blank=True, null=True, verbose_name="Soldier ID")
     rank = models.CharField(max_length=20, choices=RANK_CHOICES, default='PRIVATE')
     
     # Soldier properties for scheduling
@@ -78,10 +100,11 @@ class Soldier(models.Model):
     class Meta:
         verbose_name = "Soldier"
         verbose_name_plural = "Soldiers"
-        ordering = ['rank', 'name']
+        ordering = ['event', 'rank', 'name']
+        unique_together = ('event', 'soldier_id')  # Soldier ID unique within event
     
     def __str__(self):
-        return f"{self.rank} {self.name}"
+        return f"{self.rank} {self.name} ({self.event.name})"
 
 
 class SoldierConstraint(models.Model):
@@ -155,8 +178,13 @@ class SchedulingRun(models.Model):
         return f"{self.name} for {self.event.name} ({self.status})"
     
     def get_target_soldiers(self):
-        """Get all soldiers for this scheduling run"""
-        return self.soldiers.all()
+        """Get all soldiers for this scheduling run - automatically from the event"""
+        if self.soldiers.exists():
+            # If specific soldiers are selected, use them
+            return self.soldiers.all()
+        else:
+            # Otherwise, use all soldiers from the event
+            return self.event.soldiers.all()
 
 
 class Assignment(models.Model):

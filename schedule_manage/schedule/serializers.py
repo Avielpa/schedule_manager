@@ -26,12 +26,13 @@ class SoldierConstraintSerializer(serializers.ModelSerializer):
 
 class SoldierListSerializer(serializers.ModelSerializer):
     """Simplified soldier serializer for lists"""
+    event_name = serializers.CharField(source='event.name', read_only=True)
     constraints_count = serializers.SerializerMethodField()
     
     class Meta:
         model = Soldier
         fields = [
-            'id', 'name', 'soldier_id', 'rank', 'constraints_count', 'is_exceptional_output',
+            'id', 'event', 'event_name', 'name', 'soldier_id', 'rank', 'constraints_count', 'is_exceptional_output',
             'is_weekend_only_soldier_flag'
         ]
     
@@ -41,6 +42,8 @@ class SoldierListSerializer(serializers.ModelSerializer):
 
 class SoldierDetailSerializer(serializers.ModelSerializer):
     """Detailed soldier serializer with JSON POST support"""
+    event_name = serializers.CharField(source='event.name', read_only=True)
+    event_id = serializers.IntegerField(write_only=True)
     constraints = SoldierConstraintSerializer(many=True, read_only=True)
     constraints_data = serializers.ListField(
         child=serializers.DictField(), 
@@ -52,16 +55,30 @@ class SoldierDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Soldier
         fields = [
-            'id', 'name', 'soldier_id', 'rank', 'is_exceptional_output', 'is_weekend_only_soldier_flag',
+            'id', 'event', 'event_name', 'event_id', 'name', 'soldier_id', 'rank', 'is_exceptional_output', 'is_weekend_only_soldier_flag',
             'constraints', 'constraints_data', 'created_at'
         ]
         read_only_fields = ['id', 'created_at']
         
-    def validate_soldier_id(self, value):
-        """Validate soldier_id uniqueness"""
-        if value and Soldier.objects.filter(soldier_id=value).exists():
-            raise serializers.ValidationError("Soldier with this ID already exists")
+    def validate_event_id(self, value):
+        """Validate event exists"""
+        try:
+            Event.objects.get(id=value)
+        except Event.DoesNotExist:
+            raise serializers.ValidationError("Event with this ID does not exist")
         return value
+    
+    def validate(self, data):
+        """Validate soldier_id uniqueness within event"""
+        soldier_id = data.get('soldier_id')
+        event_id = data.get('event_id')
+        
+        if soldier_id and event_id:
+            # Check if soldier_id already exists for this event
+            if Soldier.objects.filter(soldier_id=soldier_id, event_id=event_id).exists():
+                raise serializers.ValidationError({"soldier_id": "Soldier with this ID already exists in this event"})
+        
+        return data
     
     def create(self, validated_data):
         """Create soldier with optional constraints"""
@@ -147,7 +164,7 @@ class SchedulingRunListSerializer(serializers.ModelSerializer):
 
 class SchedulingRunDetailSerializer(serializers.ModelSerializer):
     """Detailed scheduling run serializer with enhanced JSON POST support"""
-    event = EventSerializer(read_only=True)
+    event_name = serializers.CharField(source='event.name', read_only=True)
     event_id = serializers.IntegerField(write_only=True)
     soldiers = SoldierListSerializer(many=True, read_only=True)
     soldiers_ids = serializers.ListField(
@@ -162,7 +179,7 @@ class SchedulingRunDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = SchedulingRun
         fields = [
-            'id', 'name', 'description', 'event', 'event_id', 'soldiers', 'soldiers_ids',
+            'id', 'name', 'description', 'event', 'event_name', 'event_id', 'soldiers', 'soldiers_ids',
             'soldiers_count', 'status', 'solution_details', 'processing_time_seconds', 
             'created_by', 'created_by_username', 'created_at'
         ]
