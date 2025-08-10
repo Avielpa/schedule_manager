@@ -5,74 +5,121 @@
 
 This is a Django-based military scheduling system that uses advanced constraint programming to generate optimal duty schedules for soldiers. The system employs Google OR-Tools to solve complex scheduling problems while maintaining fairness, balance, and operational requirements.
 
+## ✅ Project Status
+
+**Current Status**: READY FOR UI DEVELOPMENT
+- ✅ Backend algorithms engine fully integrated and tested
+- ✅ Django models, serializers, and API endpoints working correctly  
+- ✅ Admin interface configured and functional
+- ✅ Database migrations applied and tested
+- ✅ All dependencies properly installed and configured
+- ✅ Algorithm integration with views.py completed
+- ✅ Comprehensive testing completed
+- 🔄 Ready for React/mobile UI integration
+
 ## 🏗️ Project Architecture & Data Structure
 
-### Core Components
+### Current Project Structure
 
 ```
 schedule_manage/
 ├── manage.py                   # Django management script
-├── schedule_manage/            # Django project settings
+├── db_fresh.sqlite3           # SQLite database  
+├── requirements.txt           # Python dependencies
+├── schedule_manage/           # Django project settings
 │   ├── settings.py            # Main configuration
 │   ├── urls.py                # URL routing
 │   ├── wsgi.py                # Web server interface
-│   └── asgi.py                # ASGI configuration
-├── schedule/                   # Main application
-│   ├── models.py              # Database models
-│   ├── views.py               # API endpoints
-│   ├── serializers.py         # API serialization
-│   ├── urls.py                # App URL patterns
+│   └── celery.py              # Celery configuration
+├── schedule/                  # Main Django application
+│   ├── models.py              # Database models (Event, Soldier, SchedulingRun, Assignment)
+│   ├── views.py               # REST API endpoints
+│   ├── serializers.py         # DRF serializers
+│   ├── urls.py                # API URL patterns
 │   ├── admin.py               # Django admin interface
 │   ├── tasks.py               # Background tasks
-│   ├── algorithms/            # Scheduling algorithm engine
-│   │   ├── solver.py          # Main algorithm engine
-│   │   ├── variables.py       # Decision variables
-│   │   ├── objective.py       # Optimization objectives
-│   │   ├── config.py          # Algorithm parameters
+│   ├── tests.py               # Unit tests
+│   ├── algorithms/            # 🚀 Scheduling algorithm engine
+│   │   ├── solver.py          # Main SmartScheduleSoldiers class
+│   │   ├── soldier.py         # Algorithm Soldier class
+│   │   ├── variables.py       # Decision variables management
+│   │   ├── objective.py       # Multi-objective optimization
+│   │   ├── config.py          # Algorithm parameters and constants
 │   │   ├── utils.py           # Utility functions
-│   │   ├── analysis.py        # Problem analysis
-│   │   ├── constraints/       # Constraint modules
+│   │   ├── analysis.py        # Problem analysis and parameter adaptation
+│   │   ├── constraints/       # Modular constraint system
 │   │   │   ├── basic.py       # Core constraints
-│   │   │   ├── consecutive.py # Work pattern constraints
+│   │   │   ├── consecutive.py # Work pattern constraints  
 │   │   │   ├── daily_requirements.py # Staffing constraints
-│   │   │   ├── balance.py     # Fairness constraints
-│   │   │   ├── blocks.py      # Block constraints
+│   │   │   ├── balance.py     # Fairness and workload balance
+│   │   │   ├── blocks.py      # Work block constraints
 │   │   │   ├── advanced.py    # Advanced constraints
-│   │   │   └── minimum_work.py # Minimum work constraints
-│   │   └── exporters/         # Export functionality
-│   │       ├── excel.py       # Excel export
+│   │   │   └── minimum_work.py # Minimum work requirements
+│   │   └── exporters/         # Solution export functionality
+│   │       ├── excel.py       # Excel export with formatting
 │   │       └── json.py        # JSON export
 │   └── migrations/            # Database migrations
-├── requirements.txt           # Python dependencies
-├── db.sqlite3                 # SQLite database
-├── logs/                      # Application logs
-└── venv/                      # Virtual environment
+└── venv/                      # Virtual environment (not in git)
 ```
 
 ### Database Models & Relationships
 
 ```mermaid
 erDiagram
-    Organization ||--o{ Unit : contains
-    Organization ||--o{ Soldier : has
-    Organization ||--o{ Event : organizes
-    Organization ||--o{ SchedulingRun : manages
+    Event ||--o{ SchedulingRun : "has scheduling runs"
+    Soldier ||--o{ SoldierConstraint : "has constraints"
+    Soldier ||--o{ Assignment : "has assignments"
     
-    Unit ||--o{ Unit : parent_child
-    Unit ||--o{ Soldier : assigned_to
-    Unit ||--o{ Event : targeted_by
-    Unit ||--o{ SchedulingRun : scheduled_for
+    SchedulingRun ||--o{ Assignment : "generates"
+    SchedulingRun }o--o{ Soldier : "includes soldiers"
     
-    Soldier ||--o{ SoldierConstraint : has
-    Soldier ||--o{ Assignment : assigned_in
+    Event {
+        int id
+        string name
+        string event_type
+        date start_date
+        date end_date
+        int min_required_soldiers_per_day
+        int base_days_per_soldier
+        int home_days_per_soldier
+        int max_consecutive_base_days
+        int max_consecutive_home_days
+        int min_base_block_days
+    }
     
-    Event ||--o{ SoldierConstraint : creates
+    Soldier {
+        int id
+        string name
+        string soldier_id
+        string rank
+        boolean is_exceptional_output
+        boolean is_weekend_only_soldier_flag
+    }
     
-    SchedulingRun ||--o{ Assignment : generates
+    SoldierConstraint {
+        int id
+        int soldier_id
+        date constraint_date
+        string constraint_type
+        string description
+    }
     
-    ImportBatch ||--o{ Soldier : imports
+    SchedulingRun {
+        int id
+        string name
+        int event_id
+        string status
+        text solution_details
+        int processing_time_seconds
+    }
     
-    User ||--o{ UserOrganizationRole : has_role_in
+    Assignment {
+        int id
+        int scheduling_run_id
+        int soldier_id
+        date assignment_date
+        boolean is_on_base
+    }
 ```
 
 ## 🎯 Core Algorithm Explanation
@@ -216,32 +263,60 @@ Input Data → Constraint Model → OR-Tools Solver → Optimal Schedule → Dat
 pip install django djangorestframework ortools pandas numpy openpyxl
 ```
 
-### Quick Start
+### Manual Setup (Recommended)
+
+**Important**: Auto-activation of virtual environment has been disabled to prevent admin login issues. Please follow these manual steps:
+
+#### Step 1: Navigate to Project
 ```bash
-# 1. Clone and navigate to project
 cd schedule_manage
+```
 
-# 2. Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# venv\Scripts\activate     # Windows
+#### Step 2: Manually Activate Virtual Environment
+**Windows:**
+```bash
+venv\Scripts\activate
+```
 
-# 3. Install dependencies
+**Linux/Mac:**
+```bash
+source venv/bin/activate
+```
+
+**Verify activation:**
+```bash
+which python  # Should show venv path
+python --version  # Should show Python 3.x
+```
+
+#### Step 3: Install Dependencies
+```bash
 pip install django djangorestframework ortools pandas numpy openpyxl
+```
 
-# 4. Setup database
-python manage.py makemigrations
+#### Step 4: Setup Database
+```bash
 python manage.py migrate
+```
 
-# 5. Create admin user
+#### Step 5: Create Admin User
+```bash
 python manage.py createsuperuser
+```
 
-# 6. Start server
+#### Step 6: Start Server
+```bash
 python manage.py runserver
+```
 
-# 7. Access interfaces
-# API Root: http://localhost:8000/api/
-# Admin: http://localhost:8000/admin/
+#### Step 7: Access Interfaces
+- **API Root**: http://localhost:8000/api/
+- **Admin Panel**: http://localhost:8000/admin/
+- **API Documentation**: http://localhost:8000/api/schema/swagger-ui/ (if available)
+
+#### Step 8: When Done
+```bash
+deactivate  # Deactivate virtual environment
 ```
 
 ## 📋 Data Model Details
@@ -316,95 +391,47 @@ python manage.py runserver
 - `assignment_date`: Assignment date
 - `is_on_base`: True if on base, False if at home
 
-## 🔗 Complete API Reference
+## 🔗 API Reference
 
 ### Base URL
 ```
 http://localhost:8000/api/
 ```
 
-### 1. Organizations API
-**List Organizations**
+### Available Endpoints
+
+#### 1. Events API
+**List Events**
 ```bash
-GET /api/organizations/
+GET /api/events/
+GET /api/events/?event_type=TRAINING
+GET /api/events/?start_date=2025-01-01&end_date=2025-01-31
 ```
 
-**Create Organization**
+**Create Event**
 ```bash
-POST /api/organizations/
+POST /api/events/
 {
-    "name": "1st Infantry Division",
-    "code": "1ID",
-    "description": "First Infantry Division",
-    "contact_email": "admin@1id.mil",
-    "contact_phone": "+1-555-0100"
+    "name": "Training Exercise",
+    "event_type": "TRAINING",
+    "description": "Basic training",
+    "start_date": "2025-01-01", 
+    "end_date": "2025-01-31",
+    "min_required_soldiers_per_day": 10,
+    "base_days_per_soldier": 15,
+    "home_days_per_soldier": 16,
+    "max_consecutive_base_days": 7,
+    "max_consecutive_home_days": 10,
+    "min_base_block_days": 3
 }
 ```
 
-**Get Organization Statistics**
-```bash
-GET /api/organizations/{id}/statistics/
-# Returns: units_count, soldiers_count, recent_imports, active_schedules
-```
-
-### 2. Units API
-**List Units**
-```bash
-GET /api/units/
-GET /api/units/?organization=1         # Filter by organization
-GET /api/units/?unit_type=COMPANY      # Filter by type
-GET /api/units/?parent_unit=1          # Filter by parent
-GET /api/units/?top_level=true         # Only top-level units
-```
-
-**Create Unit**
-```bash
-POST /api/units/
-{
-    "name": "Alpha Company",
-    "code": "A-CO",
-    "unit_type": "COMPANY",
-    "organization_id": 1,
-    "parent_unit_id": 2,
-    "commander": "Captain Smith",
-    "default_min_soldiers_per_day": 10
-}
-```
-
-**Get Unit Soldiers**
-```bash
-GET /api/units/{id}/soldiers/
-# Returns all soldiers in unit and sub-units
-```
-
-**Bulk Create Soldiers for Unit**
-```bash
-POST /api/units/{id}/bulk_create_soldiers/
-[
-    {
-        "name": "John Doe",
-        "soldier_id": "12345",
-        "rank": "PRIVATE",
-        "is_exceptional_output": false,
-        "is_weekend_only_soldier_flag": false
-    },
-    {
-        "name": "Jane Smith",
-        "soldier_id": "12346",
-        "rank": "CORPORAL",
-        "is_exceptional_output": true,
-        "is_weekend_only_soldier_flag": false
-    }
-]
-```
-
-### 3. Soldiers API
+#### 2. Soldiers API  
 **List Soldiers**
 ```bash
 GET /api/soldiers/
-GET /api/soldiers/?organization=1      # Filter by organization
-GET /api/soldiers/?unit=2              # Filter by unit
-GET /api/soldiers/?status=ACTIVE       # Filter by status
+GET /api/soldiers/?rank=PRIVATE
+GET /api/soldiers/?is_exceptional=true
 ```
 
 **Create Soldier**
@@ -412,25 +439,38 @@ GET /api/soldiers/?status=ACTIVE       # Filter by status
 POST /api/soldiers/
 {
     "name": "John Doe",
-    "soldier_id": "12345",
+    "soldier_id": "S001", 
     "rank": "PRIVATE",
-    "organization_id": 1,
-    "unit_id": 2,
-    "email": "john.doe@example.com",
-    "phone": "+1-555-0123",
     "is_exceptional_output": false,
-    "is_weekend_only_soldier_flag": false,
-    "status": "ACTIVE"
+    "is_weekend_only_soldier_flag": false
 }
 ```
 
-### 4. Soldier Constraints API
+**Bulk Create Soldiers**
+```bash
+POST /api/soldiers/bulk_create/
+[
+    {
+        "name": "Soldier 1",
+        "soldier_id": "S001",
+        "rank": "PRIVATE"
+    },
+    {
+        "name": "Soldier 2", 
+        "soldier_id": "S002",
+        "rank": "CORPORAL",
+        "is_exceptional_output": true
+    }
+]
+```
+
+#### 3. Soldier Constraints API
 **Add Constraint**
 ```bash
 POST /api/soldier-constraints/
 {
     "soldier": 1,
-    "constraint_date": "2025-09-15",
+    "constraint_date": "2025-01-15",
     "description": "Medical appointment",
     "constraint_type": "MEDICAL"
 }
@@ -439,63 +479,19 @@ POST /api/soldier-constraints/
 **List Constraints**
 ```bash
 GET /api/soldier-constraints/
-GET /api/soldier-constraints/?soldier=1           # Filter by soldier
-GET /api/soldier-constraints/?unit=2              # Filter by unit
-GET /api/soldier-constraints/?constraint_type=MEDICAL  # Filter by type
-GET /api/soldier-constraints/?start_date=2025-07-25&end_date=2025-09-18  # Date range
+GET /api/soldier-constraints/?soldier=1
+GET /api/soldier-constraints/?constraint_type=MEDICAL
 ```
 
-### 5. Events API
-**Create Event**
-```bash
-POST /api/events/
-{
-    "name": "Special Training Exercise",
-    "event_type": "TRAINING",
-    "start_date": "2025-09-01",
-    "end_date": "2025-11-01",
-    "description": "Advanced combat training",
-    "organization_id": 1,
-    "target_units_ids": [1, 2],
-    "priority_level": 8,
-    "is_mandatory": true,
-    
-    # Enable custom scheduling parameters
-    "override_global_settings": true,
-    "base_days_per_soldier": 28,
-    "home_days_per_soldier": 32,
-    "max_consecutive_base_days": 7,
-    "max_consecutive_home_days": 10,
-    "min_base_block_days": 3,
-    "min_required_soldiers": 15,
-    "require_weekend_coverage": true,
-    "weekend_min_soldiers": 8
-}
-```
-
-**Get Event Target Soldiers**
-```bash
-GET /api/events/{id}/target_soldiers/
-# Returns all soldiers affected by this event
-```
-
-### 6. Scheduling Runs API
+#### 4. Scheduling Runs API
 **Create Scheduling Run**
 ```bash
 POST /api/scheduling-runs/
 {
-    "name": "Summer 2025 Schedule",
-    "description": "Regular monthly schedule",
-    "organization_id": 1,
-    "target_units_ids": [1, 2, 3],
-    "start_date": "2025-07-25",
-    "end_date": "2025-09-18",
-    "default_base_days_target": 33,
-    "default_home_days_target": 25,
-    "max_consecutive_base_days": 7,
-    "max_consecutive_home_days": 10,
-    "min_base_block_days": 3,
-    "min_required_soldiers_per_day": 15
+    "name": "January 2025 Schedule",
+    "description": "Monthly schedule",
+    "event": 1,
+    "soldiers_ids": [1, 2, 3, 4, 5]
 }
 ```
 
@@ -508,17 +504,23 @@ POST /api/scheduling-runs/{id}/execute_algorithm/
 **List Scheduling Runs**
 ```bash
 GET /api/scheduling-runs/
-GET /api/scheduling-runs/?organization=1   # Filter by organization
-GET /api/scheduling-runs/?status=SUCCESS   # Filter by status
+GET /api/scheduling-runs/?event=1
+GET /api/scheduling-runs/?status=SUCCESS
 ```
 
-### 7. Assignments API
+#### 5. Assignments API
 **View Assignments**
 ```bash
 GET /api/assignments/
-GET /api/assignments/?scheduling_run=1     # Filter by scheduling run
-GET /api/assignments/?soldier=1            # Filter by soldier
-GET /api/assignments/?start_date=2025-07-25&end_date=2025-09-18  # Date range
+GET /api/assignments/?scheduling_run=1
+GET /api/assignments/?soldier=1
+GET /api/assignments/?start_date=2025-01-01&end_date=2025-01-31
+```
+
+**Calendar View**
+```bash
+GET /api/assignments/calendar/?scheduling_run=1
+# Returns assignments grouped by date
 ```
 
 ## 📖 Step-by-Step Usage Guide

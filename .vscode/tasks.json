@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Django Server (Manual)",
+            "type": "shell",
+            "command": "echo",
+            "args": [
+                "Please manually activate venv first:",
+                "Windows: venv\\Scripts\\activate",
+                "Linux/Mac: source venv/bin/activate", 
+                "Then run: python manage.py runserver"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": []
+}

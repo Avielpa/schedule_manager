@@ -1,4 +1,30 @@
 {
   "python.terminal.activateEnvironment": false,
-  "python.defaultInterpreterPath": null
+  "python.defaultInterpreterPath": "",
+  "python.terminal.activateEnvInCurrentTerminal": false,
+  "python.envFile": "",
+  "python.pythonPath": "",
+  "python.venvPath": "",
+  "python.condaPath": "",
+  "python.autoComplete.extraPaths": [],
+  "python.analysis.autoImportCompletions": false,
+  "python.terminal.executeInFileDir": false,
+  "python.analysis.autoSearchPaths": false,
+  "python.analysis.extraPaths": [],
+  "terminal.integrated.automationProfile.windows": null,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.env.windows": {
+    "VIRTUAL_ENV": "",
+    "PYTHONPATH": "",
+    "PYTHON_PATH": "",
+    "CONDA_DEFAULT_ENV": "",
+    "PIPENV_ACTIVE": ""
+  },
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.shellIntegration.enabled": false,
+  "terminal.integrated.commandsToSkipShell": [],
+  "files.associations": {
+    "*.py": "python"
+  }
 }

@@ -1,0 +1,34 @@
+# Minimal Requirements - Only Essential Packages
+# Generated based on actual code analysis
+
+# Core Django Framework
+Django>=4.2.0,<5.0
+djangorestframework>=3.14.0
+
+# Scheduling Algorithm Engine
+ortools>=9.7.0
+
+# Excel Export Functionality  
+openpyxl>=3.0.0
+
+# Background Task Processing
+celery>=5.2.0
+
+# API Enhancement (Optional but Used in Settings)
+django-cors-headers>=4.0.0
+django-filter>=23.0.0
+drf-spectacular>=0.26.0
+
+# Development/Debug (Remove in Production)
+django-debug-toolbar>=4.0.0
+
+# Notes:
+# - Removed: pandas, numpy, scipy (not imported in code)
+# - Removed: matplotlib, seaborn, plotly (visualization not used)
+# - Removed: xlsxwriter (using openpyxl instead)  
+# - Removed: pytest, black, flake8 (development tools)
+# - Removed: psycopg2, redis (not using PostgreSQL or Redis)
+# - Removed: security packages (django-ratelimit, cryptography)
+# - Removed: monitoring (sentry-sdk, memory-profiler)
+#
+# Total packages reduced from ~25 to 9 essential packages
