@@ -38,15 +38,15 @@ class AssignmentInline(admin.TabularInline):
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ('name', 'event_type', 'start_date', 'end_date', 'get_soldiers_count', 'min_required_soldiers_per_day')
+    list_display = ('id', 'name', 'event_type', 'start_date', 'end_date', 'get_soldiers_count', 'min_required_soldiers_per_day')
     list_filter = ('event_type', 'start_date', 'created_at')
     search_fields = ('name', 'description')
-    readonly_fields = ('created_at', 'get_soldiers_count')
+    readonly_fields = ('id', 'created_at', 'get_soldiers_count')
     inlines = [SoldierInline]
     
     fieldsets = (
         ('Basic Information', {
-            'fields': ('name', 'event_type', 'description', 'start_date', 'end_date')
+            'fields': ('id', 'name', 'event_type', 'description', 'start_date', 'end_date')
         }),
         ('Core Scheduling Rules', {
             'fields': (
@@ -96,10 +96,10 @@ class EventAdmin(admin.ModelAdmin):
 
 @admin.register(Soldier)
 class SoldierAdmin(admin.ModelAdmin):
-    list_display = ('name', 'soldier_id', 'rank', 'event', 'get_constraints_count', 'is_exceptional_output', 'is_weekend_only_soldier_flag')
+    list_display = ('id', 'name', 'soldier_id', 'rank', 'get_event_info', 'get_constraints_count', 'is_exceptional_output', 'is_weekend_only_soldier_flag')
     list_filter = ('event', 'rank', 'is_exceptional_output', 'is_weekend_only_soldier_flag')
     search_fields = ('name', 'soldier_id', 'event__name')
-    readonly_fields = ('created_at', 'get_constraints_count')
+    readonly_fields = ('id', 'created_at', 'get_constraints_count')
     inlines = [SoldierConstraintInline]
     
     fieldsets = (
@@ -107,7 +107,7 @@ class SoldierAdmin(admin.ModelAdmin):
             'fields': ('event',)
         }),
         ('Basic Information', {
-            'fields': ('name', 'soldier_id', 'rank')
+            'fields': ('id', 'name', 'soldier_id', 'rank')
         }),
         ('Soldier Properties', {
             'fields': ('is_exceptional_output', 'is_weekend_only_soldier_flag')
@@ -121,20 +121,24 @@ class SoldierAdmin(admin.ModelAdmin):
     def get_constraints_count(self, obj):
         return obj.constraints.count()
     get_constraints_count.short_description = 'Constraints'
+    
+    def get_event_info(self, obj):
+        return f"{obj.event.name} (ID: {obj.event.id})"
+    get_event_info.short_description = 'Event'
 
 
 @admin.register(SchedulingRun)
 class SchedulingRunAdmin(admin.ModelAdmin):
-    list_display = ('name', 'event', 'status', 'get_soldiers_count', 'created_at')
+    list_display = ('id', 'name', 'get_event_info', 'status', 'get_soldiers_count', 'created_at')
     list_filter = ('status', 'event', 'created_at')
-    search_fields = ('name', 'description')
-    readonly_fields = ('created_at', 'processing_time_seconds')
+    search_fields = ('name', 'description', 'event__name')
+    readonly_fields = ('id', 'created_at', 'processing_time_seconds')
     filter_horizontal = ('soldiers',)
     inlines = [AssignmentInline]
     
     fieldsets = (
         ('Basic Information', {
-            'fields': ('name', 'description', 'event')
+            'fields': ('id', 'name', 'description', 'event')
         }),
         ('Soldiers', {
             'fields': ('soldiers',)
@@ -152,6 +156,10 @@ class SchedulingRunAdmin(admin.ModelAdmin):
     def get_soldiers_count(self, obj):
         return obj.soldiers.count()
     get_soldiers_count.short_description = 'Soldiers'
+    
+    def get_event_info(self, obj):
+        return f"{obj.event.name} (ID: {obj.event.id})"
+    get_event_info.short_description = 'Event'
 
 
 @admin.register(Assignment)

@@ -1,0 +1,116 @@
+# 🎯 Military Scheduling System - How to Use Guide
+
+## 📋 Prerequisites
+- Python 3.8+ installed
+- Virtual environment activated (./venv/Scripts/activate)
+- All dependencies installed (pip install -r requirements.txt)
+
+## 🚀 Step-by-Step Usage
+
+### 1. Database Setup
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser  # Create admin user if not exists
+```
+
+### 2. Start the Server
+```bash
+python manage.py runserver
+```
+✅ Server will run at: http://127.0.0.1:8000
+
+### 3. Access Admin Interface
+- Open browser: http://127.0.0.1:8000/admin
+- Login with superuser credentials
+- You'll see: Events, Soldiers, Scheduling Runs, etc.
+
+### 4. Create an Event
+- In admin, click on "Events" 
+- Click "+ Add Event" button
+- Fill required fields:
+  - Name: e.g., "Training Exercise 2025"
+  - Event Type: TRAINING/EXERCISE/OPERATION
+  - Start Date & End Date
+  - Algorithm parameters (soldiers per day, base days, etc.)
+- Click "Save"
+- ✅ **Event ID is now visible** in the admin list and in the event details page
+- ✅ Note the Event ID for next steps (displayed as the first column)
+
+### 5. Add Soldiers with Constraints
+**Method A: Using API Browser**
+- Go to: http://127.0.0.1:8000/api/soldiers/bulk_create/
+- Select "JSON" format
+- Paste content from `bulk_create_soldiers.json` or use your own content but with this format.
+- Update "event_id" to match your event
+- Click "POST"
+
+
+### 6. Create Scheduling Run
+- Back to admin: http://127.0.0.1:8000/admin/schedule/schedulingrun/
+- Click "+ Add Scheduling Run"
+- Fill details:
+  - Name: "January Schedule Run"
+  - Description: Optional
+  - Event: Select your event from dropdown
+- Click "Save"
+- ✅ **Scheduling Run ID is now visible** in the admin list (first column)
+- ✅ Event info shows as "Event Name (ID: X)" for easy reference
+
+### 7. Execute Algorithm
+**Method A: Using API Browser**
+- Go to: http://127.0.0.1:8000/api/scheduling-runs/{ID}/execute_algorithm/
+- Replace {ID} with your Scheduling Run ID
+- Click "POST" 
+
+
+### 8. View Results
+**Success Response:**
+```json
+{
+  "message": "Algorithm executed successfully",
+  "assignments_created": 564
+}
+```
+
+**Check Results:**
+- Admin: View assignments in "Assignments" section
+- API: http://127.0.0.1:8000/api/assignments/?scheduling_run={ID}
+- Excel/JSON files: Generated in project root directory
+
+## 🎨 Excel Export Features
+- **Soldier Types**: [REGULAR], [EXCEPTIONAL], [WEEKEND]
+- **Transitions**: BACK (returned from home), HOME (went home)
+- **Color Coding**: Base days (blue), Home days (white), Weekend (orange)
+- **Summary**: Total days, transitions count per soldier
+
+## 🔧 Admin Interface Features
+- **Event IDs**: Clearly visible in all event listings and detail pages
+- **Scheduling Run IDs**: Displayed as first column for easy reference
+- **Event References**: Shows "Event Name (ID: X)" format in related models
+- **Soldier IDs**: Database IDs visible for API integration
+- **Enhanced Search**: Search by event names, soldier names, IDs
+
+## ❗ Common Issues
+1. **Port 8000 already in use**: Change to `python manage.py runserver 8001`
+2. **No feasible solution**: Reduce constraints or increase event duration
+3. **Unicode errors**: Already fixed in current version
+4. **Admin login**: Create superuser if you haven't: `python manage.py createsuperuser`
+
+## 📞 API Endpoints Summary
+- Events: http://127.0.0.1:8000/api/events/
+- Soldiers: http://127.0.0.1:8000/api/soldiers/
+- Bulk Create: http://127.0.0.1:8000/api/soldiers/bulk_create/
+- Scheduling Runs: http://127.0.0.1:8000/api/scheduling-runs/
+- Execute Algorithm: http://127.0.0.1:8000/api/scheduling-runs/{ID}/execute_algorithm/
+- Assignments: http://127.0.0.1:8000/api/assignments/
+
+## 🎯 Success Indicators
+✅ Database migrations completed
+✅ Server starts without errors  
+✅ Admin interface accessible
+✅ Event created successfully
+✅ Soldiers imported via bulk_create
+✅ Scheduling run created
+✅ Algorithm executed successfully
+✅ Excel/JSON files generated

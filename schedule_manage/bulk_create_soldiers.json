@@ -1,0 +1,532 @@
+{
+  "event_id": 14,
+  "soldiers": [
+    {
+      "name": "נחמיה",
+      "soldier_id": "NHM001",
+      "rank": "SERGEANT",
+      "is_exceptional_output": false,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-10",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ אישי"
+        },
+        {
+          "constraint_date": "2025-08-11",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ אישי"
+        },
+        {
+          "constraint_date": "2025-08-12",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ אישי"
+        },
+        {
+          "constraint_date": "2025-08-17",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ אישי"
+        },
+        {
+          "constraint_date": "2025-08-18",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ אישי"
+        },
+        {
+          "constraint_date": "2025-08-19",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ אישי"
+        }
+      ]
+    },
+    {
+      "name": "אביאל",
+      "soldier_id": "AVI001",
+      "rank": "PRIVATE",
+      "is_exceptional_output": false,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-18",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-21",
+          "constraint_type": "PERSONAL",
+          "description": "יוצא הביתה"
+        }
+      ]
+    },
+    {
+      "name": "יאיר",
+      "soldier_id": "YAR001",
+      "rank": "PRIVATE",
+      "is_exceptional_output": true,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-27",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-28",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-29",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-30",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-31",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-07",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        }
+      ]
+    },
+    {
+      "name": "קינדה",
+      "soldier_id": "QND001",
+      "rank": "PRIVATE",
+      "is_exceptional_output": true,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-13",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-14",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-15",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-27",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-05",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-06",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-07",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-08",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-11",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        }
+      ]
+    },
+    {
+      "name": "גל",
+      "soldier_id": "GAL001",
+      "rank": "SERGEANT",
+      "is_exceptional_output": true,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-14",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-23",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-24",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-25",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-26",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ אישי"
+        }
+      ]
+    },
+    {
+      "name": "שטרית",
+      "soldier_id": "STR001",
+      "rank": "PRIVATE",
+      "is_exceptional_output": true,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-20",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-21",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-22",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-23",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-24",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-28",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-08",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        }
+      ]
+    },
+    {
+      "name": "אושיק",
+      "soldier_id": "OSH001",
+      "rank": "PRIVATE",
+      "is_exceptional_output": true,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-18",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-19",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-20",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-21",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-22",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-23",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-24",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-25",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        }
+      ]
+    },
+    {
+      "name": "יוסי",
+      "soldier_id": "YOS001",
+      "rank": "SERGEANT",
+      "is_exceptional_output": true,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-10",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-20",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-21",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-22",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-23",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-24",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-25",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-26",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-27",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-28",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        }
+      ]
+    },
+    {
+      "name": "אורי יפה",
+      "soldier_id": "URI001",
+      "rank": "PRIVATE",
+      "is_exceptional_output": false,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-20",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-21",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-08",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-21",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        }
+      ]
+    },
+    {
+      "name": "שניר",
+      "soldier_id": "SNR001",
+      "rank": "PRIVATE",
+      "is_exceptional_output": false,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-18",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-19",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-01",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        }
+      ]
+    },
+    {
+      "name": "ישראל גבעון",
+      "soldier_id": "ISR001",
+      "rank": "SERGEANT",
+      "is_exceptional_output": false,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": []
+    },
+    {
+      "name": "ינון",
+      "soldier_id": "YNN001",
+      "rank": "PRIVATE",
+      "is_exceptional_output": true,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {
+          "constraint_date": "2025-08-11",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-12",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-13",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-14",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-18",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-19",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-20",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-21",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-25",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-26",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-27",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-08-28",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-01",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-02",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-03",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-04",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-08",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-09",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-10",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-11",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-15",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-16",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-17",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        },
+        {
+          "constraint_date": "2025-09-18",
+          "constraint_type": "PERSONAL",
+          "description": "אילוץ שהוגדר על ידי המשתמש"
+        }
+      ]
+    }
+  ]
+}
