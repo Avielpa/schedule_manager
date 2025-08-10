@@ -60,7 +60,7 @@ python manage.py runserver
 ### 7. Execute Algorithm
 **Method A: Using API Browser**
 - Go to: http://127.0.0.1:8000/api/scheduling-runs/{ID}/execute_algorithm/
-- Replace {ID} with your Scheduling Run ID
+- Replace {ID} with your Scheduling Run ID both in the url and the json
 - Click "POST" 
 
 
@@ -76,6 +76,7 @@ python manage.py runserver
 **Check Results:**
 - Admin: View assignments in "Assignments" section
 - API: http://127.0.0.1:8000/api/assignments/?scheduling_run={ID}
+- replace the ID
 - Excel/JSON files: Generated in project root directory
 
 ## 🎨 Excel Export Features
@@ -83,6 +84,7 @@ python manage.py runserver
 - **Transitions**: BACK (returned from home), HOME (went home)
 - **Color Coding**: Base days (blue), Home days (white), Weekend (orange)
 - **Summary**: Total days, transitions count per soldier
+- **output folder**: root folder
 
 ## 🔧 Admin Interface Features
 - **Event IDs**: Clearly visible in all event listings and detail pages
