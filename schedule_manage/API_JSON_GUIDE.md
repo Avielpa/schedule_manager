@@ -138,35 +138,98 @@ Content-Type: application/json
 
 **Ranks:** `PRIVATE`, `CORPORAL`, `SERGEANT`, `LIEUTENANT`, `CAPTAIN`, `MAJOR`, `COLONEL`, `GENERAL`, `CIVILIAN`
 
-### Bulk Create Soldiers
+### Bulk Create Soldiers (Enhanced - Multiple Formats)
 **Endpoint:** `POST /api/soldiers/bulk_create/`
 
-**Request Body:**
+The bulk create endpoint now supports **three different formats** for maximum flexibility:
+
+#### Format 1: Array of Soldier Objects (Original)
+Best for precise control over each soldier:
+
 ```json
 [
   {
+    "event_id": 1,
     "name": "Soldier 1",
-    "soldier_id": "BULK001",
+    "soldier_id": "S001",
     "rank": "PRIVATE",
     "is_exceptional_output": false,
     "is_weekend_only_soldier_flag": false
   },
   {
+    "event_id": 1,
     "name": "Soldier 2",
-    "soldier_id": "BULK002",
+    "soldier_id": "S002",
     "rank": "CORPORAL",
     "is_exceptional_output": true,
-    "is_weekend_only_soldier_flag": false,
     "constraints_data": [
       {
-        "constraint_date": "2025-02-10",
-        "constraint_type": "TRAINING",
-        "description": "Course training"
+        "constraint_date": "2025-01-15",
+        "constraint_type": "PERSONAL",
+        "description": "Leave request"
       }
     ]
   }
 ]
 ```
+
+#### Format 2: Object with Soldiers Array (New)
+Best for grouped soldiers with shared event:
+
+```json
+{
+  "event_id": 1,
+  "soldiers": [
+    {
+      "name": "Team Alpha 1",
+      "soldier_id": "TA001",
+      "rank": "PRIVATE"
+    },
+    {
+      "name": "Team Alpha 2", 
+      "soldier_id": "TA002",
+      "rank": "CORPORAL",
+      "is_exceptional_output": true
+    },
+    {
+      "name": "Team Alpha 3",
+      "soldier_id": "TA003",
+      "rank": "SERGEANT",
+      "is_weekend_only_soldier_flag": true
+    }
+  ]
+}
+```
+
+#### Format 3: Rapid Testing with Auto-Generation (New)
+Best for quick test data generation:
+
+```json
+{
+  "event_id": 1,
+  "count": 10,
+  "base_name": "Test Soldier",
+  "base_id": "TS",
+  "rank": "PRIVATE",
+  "make_exceptional": [8, 9, 10],
+  "make_weekend_only": [7],
+  "add_constraints": true
+}
+```
+
+**Rapid Testing Parameters:**
+- `count`: Number of soldiers to create (default: 5)
+- `base_name`: Name template (becomes "Test Soldier 01", "Test Soldier 02", etc.)
+- `base_id`: ID template (becomes "TS001", "TS002", etc.)
+- `rank`: Default rank for all soldiers
+- `make_exceptional`: Array of soldier numbers to mark as exceptional
+- `make_weekend_only`: Array of soldier numbers to mark as weekend-only
+- `add_constraints`: If true, auto-generates realistic constraints
+
+**Auto-Generated Constraints:**
+- Exceptional soldiers get 6 constraints (mix of PERSONAL/MEDICAL)
+- Regular soldiers (every 3rd) get 2 constraints (FAMILY/TRAINING)
+- Constraints are spread across the event date range
 
 **Response:**
 ```json

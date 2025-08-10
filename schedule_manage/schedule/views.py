@@ -146,34 +146,70 @@ class SoldierViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['post'])
     def bulk_create(self, request):
         """
-        Create multiple soldiers at once via JSON POST
+        Create multiple soldiers at once via JSON POST - Enhanced for Rapid Testing
         
+        Supports multiple formats for flexibility:
+        
+        Format 1: Array of soldier objects (original)
         POST /api/soldiers/bulk_create/
         Content-Type: application/json
         [
-            {
-                "name": "Soldier 1",
-                "soldier_id": "S001", 
-                "rank": "PRIVATE",
-                "is_exceptional_output": false,
-                "is_weekend_only_soldier_flag": false
-            },
-            {
-                "name": "Soldier 2",
-                "soldier_id": "S002",
-                "rank": "CORPORAL",
-                "is_exceptional_output": true,
-                "constraints_data": [
-                    {
-                        "constraint_date": "2025-01-15",
-                        "constraint_type": "PERSONAL",
-                        "description": "Leave"
-                    }
-                ]
-            }
+            {"event_id": 1, "name": "Soldier 1", "soldier_id": "S001", "rank": "PRIVATE"},
+            {"event_id": 1, "name": "Soldier 2", "soldier_id": "S002", "rank": "CORPORAL"}
         ]
+        
+        Format 2: Single object with soldiers array (new - for rapid testing)
+        POST /api/soldiers/bulk_create/
+        Content-Type: application/json
+        {
+            "event_id": 1,
+            "soldiers": [
+                {"name": "Soldier 1", "soldier_id": "S001", "rank": "PRIVATE"},
+                {"name": "Soldier 2", "soldier_id": "S002", "rank": "CORPORAL", "is_exceptional_output": true}
+            ]
+        }
+        
+        Format 3: Rapid testing with defaults (new)
+        POST /api/soldiers/bulk_create/
+        Content-Type: application/json
+        {
+            "event_id": 1,
+            "count": 5,
+            "base_name": "Test Soldier",
+            "base_id": "TS",
+            "rank": "PRIVATE",
+            "make_exceptional": [4, 5],
+            "make_weekend_only": [3],
+            "add_constraints": true
+        }
         """
-        soldiers_data = request.data
+        # Handle different input formats
+        if isinstance(request.data, list):
+            # Format 1: Direct array of soldiers
+            soldiers_data = request.data
+        elif isinstance(request.data, dict):
+            if 'soldiers' in request.data:
+                # Format 2: Object with soldiers array
+                soldiers_data = request.data['soldiers']
+                event_id = request.data.get('event_id')
+                
+                # Add event_id to all soldiers if provided at top level
+                if event_id:
+                    for soldier_data in soldiers_data:
+                        if 'event_id' not in soldier_data:
+                            soldier_data['event_id'] = event_id
+                            
+            elif 'count' in request.data:
+                # Format 3: Rapid testing format
+                return self._handle_rapid_testing_format(request)
+            else:
+                # Single soldier object wrapped in array
+                soldiers_data = [request.data]
+        else:
+            return Response(
+                {"error": "Expected JSON array of soldiers or object with 'soldiers' array"}, 
+                status=status.HTTP_400_BAD_REQUEST
+            )
         
         # Validate input is a list
         if not isinstance(soldiers_data, list):
@@ -207,6 +243,130 @@ class SoldierViewSet(viewsets.ModelViewSet):
                     errors.append({"index": i, "errors": serializer.errors})
         
         return Response({
+            "created_soldiers": created_soldiers,
+            "errors": errors,
+            "summary": {
+                "total": len(soldiers_data),
+                "created": len(created_soldiers),
+                "failed": len(errors)
+            }
+        })
+
+    def _handle_rapid_testing_format(self, request):
+        """
+        Handle rapid testing format for bulk soldier creation
+        
+        Example:
+        {
+            "event_id": 1,
+            "count": 10,
+            "base_name": "Test Soldier",
+            "base_id": "TS",
+            "rank": "PRIVATE",
+            "make_exceptional": [8, 9, 10],
+            "make_weekend_only": [7],
+            "add_constraints": true
+        }
+        """
+        data = request.data
+        
+        # Extract parameters
+        event_id = data.get('event_id')
+        count = data.get('count', 5)
+        base_name = data.get('base_name', 'Test Soldier')
+        base_id = data.get('base_id', 'TEST')
+        rank = data.get('rank', 'PRIVATE')
+        make_exceptional = data.get('make_exceptional', [])
+        make_weekend_only = data.get('make_weekend_only', [])
+        add_constraints = data.get('add_constraints', False)
+        
+        # Validate required fields
+        if not event_id:
+            return Response(
+                {"error": "event_id is required for rapid testing format"}, 
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        # Verify event exists
+        try:
+            from .models import Event
+            event = Event.objects.get(id=event_id)
+        except Event.DoesNotExist:
+            return Response(
+                {"error": f"Event with ID {event_id} does not exist"}, 
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        # Generate soldiers data
+        soldiers_data = []
+        for i in range(1, count + 1):
+            soldier_data = {
+                'event_id': event_id,
+                'name': f"{base_name} {i:02d}",
+                'soldier_id': f"{base_id}{i:03d}",
+                'rank': rank,
+                'is_exceptional_output': i in make_exceptional,
+                'is_weekend_only_soldier_flag': i in make_weekend_only,
+            }
+            
+            # Add constraints for exceptional soldiers if requested
+            if add_constraints and i in make_exceptional:
+                constraints = []
+                # Add 5-8 constraints for exceptional soldiers
+                num_constraints = 6
+                for j in range(num_constraints):
+                    constraint_date = event.start_date + timedelta(days=j*2 + i)
+                    if constraint_date <= event.end_date:
+                        constraints.append({
+                            'constraint_date': constraint_date.isoformat(),
+                            'constraint_type': 'PERSONAL' if j % 2 == 0 else 'MEDICAL',
+                            'description': f'Auto-generated constraint {j+1} for testing'
+                        })
+                soldier_data['constraints_data'] = constraints
+            
+            # Add fewer constraints for regular soldiers if requested
+            elif add_constraints and i not in make_exceptional and i % 3 == 0:  # Every 3rd soldier
+                constraints = []
+                for j in range(2):  # 2 constraints for regular soldiers
+                    constraint_date = event.start_date + timedelta(days=5 + j*7)
+                    if constraint_date <= event.end_date:
+                        constraints.append({
+                            'constraint_date': constraint_date.isoformat(),
+                            'constraint_type': 'FAMILY' if j == 0 else 'TRAINING',
+                            'description': f'Auto-generated constraint {j+1} for testing'
+                        })
+                soldier_data['constraints_data'] = constraints
+            
+            soldiers_data.append(soldier_data)
+        
+        # Use existing bulk creation logic
+        created_soldiers = []
+        errors = []
+        from .serializers import SoldierDetailSerializer
+        
+        with transaction.atomic():
+            for i, soldier_data in enumerate(soldiers_data):
+                serializer = SoldierDetailSerializer(data=soldier_data, context={'request': request})
+                if serializer.is_valid():
+                    try:
+                        soldier = serializer.save()
+                        created_soldiers.append(SoldierDetailSerializer(soldier).data)
+                    except Exception as e:
+                        errors.append({"index": i, "error": str(e)})
+                else:
+                    errors.append({"index": i, "errors": serializer.errors})
+        
+        return Response({
+            "message": "Rapid testing soldiers created",
+            "format": "rapid_testing",
+            "parameters": {
+                "event_id": event_id,
+                "count": count,
+                "base_name": base_name,
+                "exceptional_soldiers": make_exceptional,
+                "weekend_soldiers": make_weekend_only,
+                "constraints_added": add_constraints
+            },
             "created_soldiers": created_soldiers,
             "errors": errors,
             "summary": {
