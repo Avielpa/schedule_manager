@@ -1,0 +1,54 @@
+{
+  "shifts": [
+    {
+      "id": "shift1755073810974-f39b7df4b",
+      "date": "2025-09-01",
+      "employeeName": "Alice"
+    },
+    {
+      "id": "shift1755073810974-8af4c8836",
+      "date": "2025-09-01",
+      "employeeName": "Bob"
+    },
+    {
+      "id": "shift1755073810974-f94c42950",
+      "date": "2025-09-02",
+      "employeeName": "Bob"
+    },
+    {
+      "id": "shift1755073810974-83a1a9beb",
+      "date": "2025-09-02",
+      "employeeName": "Carol"
+    },
+    {
+      "id": "shift1755073810974-7f9380ec2",
+      "date": "2025-09-03",
+      "employeeName": "Alice"
+    },
+    {
+      "id": "shift1755073810974-76cb0afb1",
+      "date": "2025-09-03",
+      "employeeName": "Carol"
+    },
+    {
+      "id": "shift1755073810974-9b15a6542",
+      "date": "2025-09-04",
+      "employeeName": "Bob"
+    },
+    {
+      "id": "shift1755073810974-4ce569aa9",
+      "date": "2025-09-04",
+      "employeeName": "Carol"
+    },
+    {
+      "id": "shift1755073810974-a5d47891e",
+      "date": "2025-09-05",
+      "employeeName": "Alice"
+    },
+    {
+      "id": "shift1755073810974-1f3a9668e",
+      "date": "2025-09-05",
+      "employeeName": "Bob"
+    }
+  ]
+}
