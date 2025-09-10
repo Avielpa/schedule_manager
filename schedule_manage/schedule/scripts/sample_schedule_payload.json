@@ -1,0 +1,64 @@
+{
+  "event": {
+    "name": "Training Exercise",
+    "event_type": "TRAINING",
+    "description": "Advanced training",
+    "start_date": "2025-09-01",
+    "end_date": "2025-09-14",
+    "min_required_soldiers_per_day": 5,
+    "base_days_per_soldier": 6,
+    "home_days_per_soldier": 6,
+    "max_consecutive_base_days": 4,
+    "max_consecutive_home_days": 5,
+    "min_base_block_days": 2
+  },
+  "soldiers": [
+    {
+      "name": "Alice Alpha",
+      "soldier_id": "S001",
+      "rank": "PRIVATE",
+      "is_exceptional_output": false,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {"constraint_date": "2025-09-03", "constraint_type": "PERSONAL", "description": "Family"}
+      ]
+    },
+    {
+      "name": "Bob Bravo",
+      "soldier_id": "S002",
+      "rank": "CORPORAL",
+      "is_exceptional_output": true,
+      "is_weekend_only_soldier_flag": false,
+      "constraints_data": [
+        {"constraint_date": "2025-09-05", "constraint_type": "MEDICAL", "description": "Dentist"},
+        {"constraint_date": "2025-09-10", "constraint_type": "TRAINING", "description": "Course"}
+      ]
+    },
+    {
+      "name": "Carol Charlie",
+      "soldier_id": "S003",
+      "rank": "PRIVATE",
+      "is_exceptional_output": false,
+      "is_weekend_only_soldier_flag": true,
+      "constraints_data": []
+    },
+    {
+      "name": "Dan Delta",
+      "soldier_id": "S004",
+      "rank": "SERGEANT",
+      "is_exceptional_output": false,
+      "is_weekend_only_soldier_flag": false
+    },
+    {
+      "name": "Eve Echo",
+      "soldier_id": "S005",
+      "rank": "PRIVATE",
+      "is_exceptional_output": false,
+      "is_weekend_only_soldier_flag": false
+    }
+  ],
+  "scheduling_run": {
+    "name": "Sep-2025 Training",
+    "description": "Two-week schedule"
+  }
+}
